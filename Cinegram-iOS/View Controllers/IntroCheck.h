@@ -10,6 +10,8 @@
 
 @interface IntroCheck : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIImageView *defaultImage;
+
 - (void)skipLoad;
 
 @end

@@ -19,9 +19,14 @@
     
     // Set the background of the navigation bar
     UIImage *backgroundImage = [UIImage imageNamed:@"ge_navBar.png"];
+    
+    NSMutableDictionary *titleTextProperties = [NSMutableDictionary dictionary];
+    [titleTextProperties setValue:[UIColor colorWithRed:0.400 green:0.400 blue:0.400 alpha:1] forKey:UITextAttributeTextColor];
+    [titleTextProperties setValue:[NSValue valueWithUIOffset:UIOffsetMake(0.0, 0.0)] forKey:UITextAttributeTextShadowOffset];
+    [[UINavigationBar appearance] setTitleTextAttributes:titleTextProperties];
+    
     [navigationBarProxy setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
-    
-    
+        
     // Set the default tint for all bar button items
     UIColor *tintColour = [UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:1.];
     [[UIBarButtonItem appearance] setTintColor:tintColour];
@@ -29,9 +34,14 @@
     // The chosen font has unusual padding so finally adjust the offsets
     UIOffset titleOffset = UIOffsetMake(0, 0);
     [[UIBarButtonItem appearance] setTitlePositionAdjustment:titleOffset forBarMetrics:UIBarMetricsDefault];
-   
     
-    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ge_background.png"]];
+    NSMutableDictionary *buttonAttributes = [NSMutableDictionary dictionary];
+    [buttonAttributes setValue:[UIFont boldSystemFontOfSize:12] forKey:UITextAttributeFont];
+    [buttonAttributes setValue:[UIColor colorWithRed:0.400 green:0.400 blue:0.400 alpha:1] forKey:UITextAttributeTextColor];
+    [buttonAttributes setValue:[NSValue valueWithUIOffset:UIOffsetMake(0.0, 0.0)] forKey:UITextAttributeTextShadowOffset];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:buttonAttributes forState:UIControlStateNormal];
+    
+    self.window.backgroundColor = [UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:1];
     
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];

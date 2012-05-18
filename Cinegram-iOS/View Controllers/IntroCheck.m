@@ -10,9 +10,17 @@
 
 @implementation IntroCheck
 
+@synthesize defaultImage = _defaultImage;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [UIView beginAnimations:@"fade out" context:nil];
+    [UIView setAnimationDuration:2.0];
+    self.defaultImage.alpha = 0;
+    [UIView commitAnimations];
+    
     [self skipLoad];
 	// Do any additional setup after loading the view.
 }
@@ -25,6 +33,7 @@
 
 - (void)viewDidUnload
 {
+    [self setDefaultImage:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
