@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		61A64A6915658F540009D34D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A64A6815658F530009D34D /* UIKit.framework */; };
+		61A64A6B15658F540009D34D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A64A6A15658F540009D34D /* Foundation.framework */; };
+		61A64A6D15658F540009D34D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A64A6C15658F540009D34D /* CoreGraphics.framework */; };
+		61A64A7315658F540009D34D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61A64A7115658F540009D34D /* InfoPlist.strings */; };
+		61A64A7515658F540009D34D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A64A7415658F540009D34D /* main.m */; };
+		61A64A7915658F540009D34D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A64A7815658F540009D34D /* AppDelegate.m */; };
+		61A64A8715658F540009D34D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A64A8615658F540009D34D /* SenTestingKit.framework */; };
+		61A64A8815658F540009D34D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A64A6815658F530009D34D /* UIKit.framework */; };
+		61A64A8915658F540009D34D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A64A6A15658F540009D34D /* Foundation.framework */; };
+		61A64A9115658F540009D34D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61A64A8F15658F540009D34D /* InfoPlist.strings */; };
+		61A64A9415658F540009D34D /* Cinegram_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A64A9315658F540009D34D /* Cinegram_iOSTests.m */; };
+		61A64A9F15658FC10009D34D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A64A9D15658FC10009D34D /* Icon.png */; };
+		61A64AA015658FC10009D34D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A64A9E15658FC10009D34D /* Icon@2x.png */; };
+		61A64AA31565950F0009D34D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A64AA11565950F0009D34D /* Default.png */; };
+		61A64AA41565950F0009D34D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A64AA21565950F0009D34D /* Default@2x.png */; };
+		61A64AAA15659E8B0009D34D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A64AA815659E8B0009D34D /* MainStoryboard.storyboard */; };
+		61A64AAD15659ECE0009D34D /* IntroCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A64AAC15659ECE0009D34D /* IntroCheck.m */; };
+		61A64AB315659F640009D34D /* ge_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A64AB115659F640009D34D /* ge_background.png */; };
+		61A64AB415659F640009D34D /* ge_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A64AB215659F640009D34D /* ge_background@2x.png */; };
+		61A64ABB15659FBF0009D34D /* HomeTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A64ABA15659FBF0009D34D /* HomeTab.m */; };
+		61A64AC71565AB200009D34D /* hm_navBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A64AC51565AB200009D34D /* hm_navBar.png */; };
+		61A64AC81565AB200009D34D /* hm_navBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A64AC61565AB200009D34D /* hm_navBar@2x.png */; };
+		61A64ACB1565AD9E0009D34D /* ge_navBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A64AC91565AD9E0009D34D /* ge_navBar.png */; };
+		61A64ACC1565AD9E0009D34D /* ge_navBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A64ACA1565AD9E0009D34D /* ge_navBar@2x.png */; };
+		61A64ACF1565AE410009D34D /* hm_navBarLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A64ACD1565AE410009D34D /* hm_navBarLogo.png */; };
+		61A64AD01565AE410009D34D /* hm_navBarLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A64ACE1565AE410009D34D /* hm_navBarLogo@2x.png */; };
+		61B6CC891565AF9D0077AA76 /* ge_tabBarBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B6CC871565AF9D0077AA76 /* ge_tabBarBG.png */; };
+		61B6CC8A1565AF9D0077AA76 /* ge_tabBarBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B6CC881565AF9D0077AA76 /* ge_tabBarBG@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61A64A8A15658F540009D34D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61A64A5B15658F530009D34D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61A64A6315658F530009D34D;
+			remoteInfo = "Cinegram-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		61A64A6415658F530009D34D /* Cinegram-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cinegram-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61A64A6815658F530009D34D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		61A64A6A15658F540009D34D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		61A64A6C15658F540009D34D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		61A64A7015658F540009D34D /* Cinegram-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cinegram-iOS-Info.plist"; sourceTree = "<group>"; };
+		61A64A7215658F540009D34D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		61A64A7415658F540009D34D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		61A64A7615658F540009D34D /* Cinegram-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cinegram-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		61A64A7715658F540009D34D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		61A64A7815658F540009D34D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		61A64A8515658F540009D34D /* Cinegram-iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cinegram-iOSTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61A64A8615658F540009D34D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		61A64A8E15658F540009D34D /* Cinegram-iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cinegram-iOSTests-Info.plist"; sourceTree = "<group>"; };
+		61A64A9015658F540009D34D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		61A64A9215658F540009D34D /* Cinegram_iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cinegram_iOSTests.h; sourceTree = "<group>"; };
+		61A64A9315658F540009D34D /* Cinegram_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cinegram_iOSTests.m; sourceTree = "<group>"; };
+		61A64A9D15658FC10009D34D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		61A64A9E15658FC10009D34D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		61A64AA11565950F0009D34D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		61A64AA21565950F0009D34D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		61A64AA815659E8B0009D34D /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		61A64AAB15659ECE0009D34D /* IntroCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroCheck.h; sourceTree = "<group>"; };
+		61A64AAC15659ECE0009D34D /* IntroCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroCheck.m; sourceTree = "<group>"; };
+		61A64AB115659F640009D34D /* ge_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ge_background.png; sourceTree = "<group>"; };
+		61A64AB215659F640009D34D /* ge_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ge_background@2x.png"; sourceTree = "<group>"; };
+		61A64AB915659FBF0009D34D /* HomeTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTab.h; sourceTree = "<group>"; };
+		61A64ABA15659FBF0009D34D /* HomeTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTab.m; sourceTree = "<group>"; };
+		61A64AC51565AB200009D34D /* hm_navBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hm_navBar.png; sourceTree = "<group>"; };
+		61A64AC61565AB200009D34D /* hm_navBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hm_navBar@2x.png"; sourceTree = "<group>"; };
+		61A64AC91565AD9E0009D34D /* ge_navBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ge_navBar.png; sourceTree = "<group>"; };
+		61A64ACA1565AD9E0009D34D /* ge_navBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ge_navBar@2x.png"; sourceTree = "<group>"; };
+		61A64ACD1565AE410009D34D /* hm_navBarLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hm_navBarLogo.png; sourceTree = "<group>"; };
+		61A64ACE1565AE410009D34D /* hm_navBarLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hm_navBarLogo@2x.png"; sourceTree = "<group>"; };
+		61B6CC871565AF9D0077AA76 /* ge_tabBarBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ge_tabBarBG.png; sourceTree = "<group>"; };
+		61B6CC881565AF9D0077AA76 /* ge_tabBarBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ge_tabBarBG@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61A64A6115658F530009D34D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61A64A6915658F540009D34D /* UIKit.framework in Frameworks */,
+				61A64A6B15658F540009D34D /* Foundation.framework in Frameworks */,
+				61A64A6D15658F540009D34D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61A64A8115658F540009D34D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61A64A8715658F540009D34D /* SenTestingKit.framework in Frameworks */,
+				61A64A8815658F540009D34D /* UIKit.framework in Frameworks */,
+				61A64A8915658F540009D34D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61A64A5915658F530009D34D = {
+			isa = PBXGroup;
+			children = (
+				61A64A9D15658FC10009D34D /* Icon.png */,
+				61A64A9E15658FC10009D34D /* Icon@2x.png */,
+				61A64AA11565950F0009D34D /* Default.png */,
+				61A64AA21565950F0009D34D /* Default@2x.png */,
+				61A64A6E15658F540009D34D /* Cinegram-iOS */,
+				61A64A8C15658F540009D34D /* Cinegram-iOSTests */,
+				61A64A6715658F530009D34D /* Frameworks */,
+				61A64A6515658F530009D34D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		61A64A6515658F530009D34D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61A64A6415658F530009D34D /* Cinegram-iOS.app */,
+				61A64A8515658F540009D34D /* Cinegram-iOSTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61A64A6715658F530009D34D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61A64A6815658F530009D34D /* UIKit.framework */,
+				61A64A6A15658F540009D34D /* Foundation.framework */,
+				61A64A6C15658F540009D34D /* CoreGraphics.framework */,
+				61A64A8615658F540009D34D /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61A64A6E15658F540009D34D /* Cinegram-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				61A64AAE15659F640009D34D /* Resources */,
+				61A64AA715659E8B0009D34D /* Storyboards */,
+				61A64AA915659E8B0009D34D /* View Controllers */,
+				61A64A7715658F540009D34D /* AppDelegate.h */,
+				61A64A7815658F540009D34D /* AppDelegate.m */,
+				61A64A6F15658F540009D34D /* Supporting Files */,
+			);
+			path = "Cinegram-iOS";
+			sourceTree = "<group>";
+		};
+		61A64A6F15658F540009D34D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				61A64A7015658F540009D34D /* Cinegram-iOS-Info.plist */,
+				61A64A7115658F540009D34D /* InfoPlist.strings */,
+				61A64A7415658F540009D34D /* main.m */,
+				61A64A7615658F540009D34D /* Cinegram-iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61A64A8C15658F540009D34D /* Cinegram-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				61A64A9215658F540009D34D /* Cinegram_iOSTests.h */,
+				61A64A9315658F540009D34D /* Cinegram_iOSTests.m */,
+				61A64A8D15658F540009D34D /* Supporting Files */,
+			);
+			path = "Cinegram-iOSTests";
+			sourceTree = "<group>";
+		};
+		61A64A8D15658F540009D34D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				61A64A8E15658F540009D34D /* Cinegram-iOSTests-Info.plist */,
+				61A64A8F15658F540009D34D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61A64AA715659E8B0009D34D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				61A64AA815659E8B0009D34D /* MainStoryboard.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		61A64AA915659E8B0009D34D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				61A64AAB15659ECE0009D34D /* IntroCheck.h */,
+				61A64AAC15659ECE0009D34D /* IntroCheck.m */,
+				61A64AB915659FBF0009D34D /* HomeTab.h */,
+				61A64ABA15659FBF0009D34D /* HomeTab.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		61A64AAE15659F640009D34D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				61A64AAF15659F640009D34D /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		61A64AAF15659F640009D34D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				61A64AC41565AB200009D34D /* Home */,
+				61A64AB015659F640009D34D /* Generic */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		61A64AB015659F640009D34D /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				61A64AC91565AD9E0009D34D /* ge_navBar.png */,
+				61A64ACA1565AD9E0009D34D /* ge_navBar@2x.png */,
+				61A64AB115659F640009D34D /* ge_background.png */,
+				61A64AB215659F640009D34D /* ge_background@2x.png */,
+				61B6CC871565AF9D0077AA76 /* ge_tabBarBG.png */,
+				61B6CC881565AF9D0077AA76 /* ge_tabBarBG@2x.png */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		61A64AC41565AB200009D34D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				61A64AC51565AB200009D34D /* hm_navBar.png */,
+				61A64AC61565AB200009D34D /* hm_navBar@2x.png */,
+				61A64ACD1565AE410009D34D /* hm_navBarLogo.png */,
+				61A64ACE1565AE410009D34D /* hm_navBarLogo@2x.png */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61A64A6315658F530009D34D /* Cinegram-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61A64A9715658F540009D34D /* Build configuration list for PBXNativeTarget "Cinegram-iOS" */;
+			buildPhases = (
+				61A64A6015658F530009D34D /* Sources */,
+				61A64A6115658F530009D34D /* Frameworks */,
+				61A64A6215658F530009D34D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cinegram-iOS";
+			productName = "Cinegram-iOS";
+			productReference = 61A64A6415658F530009D34D /* Cinegram-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		61A64A8415658F540009D34D /* Cinegram-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61A64A9A15658F540009D34D /* Build configuration list for PBXNativeTarget "Cinegram-iOSTests" */;
+			buildPhases = (
+				61A64A8015658F540009D34D /* Sources */,
+				61A64A8115658F540009D34D /* Frameworks */,
+				61A64A8215658F540009D34D /* Resources */,
+				61A64A8315658F540009D34D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61A64A8B15658F540009D34D /* PBXTargetDependency */,
+			);
+			name = "Cinegram-iOSTests";
+			productName = "Cinegram-iOSTests";
+			productReference = 61A64A8515658F540009D34D /* Cinegram-iOSTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61A64A5B15658F530009D34D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Me;
+			};
+			buildConfigurationList = 61A64A5E15658F530009D34D /* Build configuration list for PBXProject "Cinegram-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 61A64A5915658F530009D34D;
+			productRefGroup = 61A64A6515658F530009D34D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61A64A6315658F530009D34D /* Cinegram-iOS */,
+				61A64A8415658F540009D34D /* Cinegram-iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61A64A6215658F530009D34D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61A64A7315658F540009D34D /* InfoPlist.strings in Resources */,
+				61A64A9F15658FC10009D34D /* Icon.png in Resources */,
+				61A64AA015658FC10009D34D /* Icon@2x.png in Resources */,
+				61A64AA31565950F0009D34D /* Default.png in Resources */,
+				61A64AA41565950F0009D34D /* Default@2x.png in Resources */,
+				61A64AAA15659E8B0009D34D /* MainStoryboard.storyboard in Resources */,
+				61A64AB315659F640009D34D /* ge_background.png in Resources */,
+				61A64AB415659F640009D34D /* ge_background@2x.png in Resources */,
+				61A64AC71565AB200009D34D /* hm_navBar.png in Resources */,
+				61A64AC81565AB200009D34D /* hm_navBar@2x.png in Resources */,
+				61A64ACB1565AD9E0009D34D /* ge_navBar.png in Resources */,
+				61A64ACC1565AD9E0009D34D /* ge_navBar@2x.png in Resources */,
+				61A64ACF1565AE410009D34D /* hm_navBarLogo.png in Resources */,
+				61A64AD01565AE410009D34D /* hm_navBarLogo@2x.png in Resources */,
+				61B6CC891565AF9D0077AA76 /* ge_tabBarBG.png in Resources */,
+				61B6CC8A1565AF9D0077AA76 /* ge_tabBarBG@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61A64A8215658F540009D34D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61A64A9115658F540009D34D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61A64A8315658F540009D34D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61A64A6015658F530009D34D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61A64A7515658F540009D34D /* main.m in Sources */,
+				61A64A7915658F540009D34D /* AppDelegate.m in Sources */,
+				61A64AAD15659ECE0009D34D /* IntroCheck.m in Sources */,
+				61A64ABB15659FBF0009D34D /* HomeTab.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61A64A8015658F540009D34D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61A64A9415658F540009D34D /* Cinegram_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61A64A8B15658F540009D34D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61A64A6315658F530009D34D /* Cinegram-iOS */;
+			targetProxy = 61A64A8A15658F540009D34D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		61A64A7115658F540009D34D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61A64A7215658F540009D34D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		61A64A8F15658F540009D34D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61A64A9015658F540009D34D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		61A64A9515658F540009D34D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		61A64A9615658F540009D34D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61A64A9815658F540009D34D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cinegram-iOS/Cinegram-iOS-Prefix.pch";
+				INFOPLIST_FILE = "Cinegram-iOS/Cinegram-iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		61A64A9915658F540009D34D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cinegram-iOS/Cinegram-iOS-Prefix.pch";
+				INFOPLIST_FILE = "Cinegram-iOS/Cinegram-iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		61A64A9B15658F540009D34D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Cinegram-iOS.app/Cinegram-iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cinegram-iOS/Cinegram-iOS-Prefix.pch";
+				INFOPLIST_FILE = "Cinegram-iOSTests/Cinegram-iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		61A64A9C15658F540009D34D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Cinegram-iOS.app/Cinegram-iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cinegram-iOS/Cinegram-iOS-Prefix.pch";
+				INFOPLIST_FILE = "Cinegram-iOSTests/Cinegram-iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61A64A5E15658F530009D34D /* Build configuration list for PBXProject "Cinegram-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61A64A9515658F540009D34D /* Debug */,
+				61A64A9615658F540009D34D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61A64A9715658F540009D34D /* Build configuration list for PBXNativeTarget "Cinegram-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61A64A9815658F540009D34D /* Debug */,
+				61A64A9915658F540009D34D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61A64A9A15658F540009D34D /* Build configuration list for PBXNativeTarget "Cinegram-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61A64A9B15658F540009D34D /* Debug */,
+				61A64A9C15658F540009D34D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61A64A5B15658F530009D34D /* Project object */;
+}
