@@ -7,29 +7,117 @@
 //
 
 #import "HomeTab.h"
+#import "HomeTableCell.h"
 
 @implementation HomeTab
+
+@synthesize button1 = _button1;
+@synthesize button2 = _button2;
+@synthesize selectedSeg = _selectedSeg;
+@synthesize swipeGestureRecognizerRight = _swipeGestureRecognizerRight;
+@synthesize swipedCell = _swipedCell;
+@synthesize deSwipedCell = _deSwipedCell;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self viewStylings];
-	// Do any additional setup after loading the view.
+    self.selectedSeg = @"0";
+    [self segWork];    
+}
+
+- (void)oneFingerSwiperight:(UISwipeGestureRecognizer *)recognizer
+{ 
+    CGPoint swipeLocation = [recognizer locationInView:self.tableView];
+    NSIndexPath *swipedIndexPath = [self.tableView indexPathForRowAtPoint:swipeLocation];
+    self.swipedCell = [NSString stringWithFormat:@"%d", swipedIndexPath.row];
+    [self.tableView reloadData];
+}
+
+- (void)oneFingerSwipeleft:(UISwipeGestureRecognizer *)recognizer
+{ 
+    CGPoint swipeLocation = [recognizer locationInView:self.tableView];
+    NSIndexPath *swipedIndexPath = [self.tableView indexPathForRowAtPoint:swipeLocation];
+    self.deSwipedCell = [NSString stringWithFormat:@"%d", swipedIndexPath.row];
+    [self.tableView reloadData];
+}
+
+- (void)segWork
+{
+    if([self.selectedSeg isEqualToString:@"0"]){
+        self.button1.selected = TRUE;
+        self.button2.selected = FALSE;
+    } else {
+        self.button1.selected = FALSE;
+        self.button2.selected = TRUE;
+    }
+}
+
+- (IBAction)button1:(id)sender {
+    self.selectedSeg = @"0";
+    [self segWork]; 
+}
+
+- (IBAction)button2:(id)sender {
+    self.selectedSeg = @"1";
+    [self segWork]; 
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath; 
+{
+    return 150;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HomeTableCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"normCell"];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"Cell %d", indexPath.row + 1];
+    cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ge_background.png"]];
+
+    UISwipeGestureRecognizer *right = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(oneFingerSwiperight:)];    
+    [right setDirection:UISwipeGestureRecognizerDirectionRight];
+    [cell addGestureRecognizer:right];
+    
+    UISwipeGestureRecognizer *left = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(oneFingerSwipeleft:)];    
+    [left setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [cell addGestureRecognizer:left];
+
+    cell.shareView.frame = CGRectMake(0, 96, cell.shareView.frame.size.width, cell.shareView.frame.size.height);
+    
+    NSString *curCell = [NSString stringWithFormat:@"%d", indexPath.row];
+    if([curCell isEqualToString:self.swipedCell]){
+        [UIView beginAnimations:@"fade out" context:nil];
+        [UIView setAnimationDuration:0.5];
+        cell.shareView.alpha = 1;
+        [UIView commitAnimations];
+        
+        self.swipedCell = @"zoink";
+    }
+    
+    if([curCell isEqualToString:self.deSwipedCell]){
+        [UIView beginAnimations:@"fade out" context:nil];
+        [UIView setAnimationDuration:0.5];
+        cell.shareView.alpha = 0;
+        [UIView commitAnimations];
+
+        self.deSwipedCell = @"zoink";
+    }
+    
+    return cell;
 }
 
 - (void)viewStylings
-{
-    [UIView beginAnimations:@"fade out" context:nil];
-    [UIView setAnimationDuration:2.0];
-    //loadingView.alpha = 0;
-    [UIView commitAnimations];
-    
+{   
     UIImage *barLogoImage = [UIImage imageNamed: @"hm_navBarLogo.png"];
     UIImageView *navigationImage = [[UIImageView alloc] initWithImage: barLogoImage];
     self.navigationItem.titleView = navigationImage;
-
-    [self.tabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"ge_tabBarBG .png"]];
-    
+        
     self.view.backgroundColor = [UIColor clearColor];
     
     UIImage *selectedImage0 = [UIImage imageNamed:@"tb_1_down.png"];
@@ -61,25 +149,11 @@
     [item4 setFinishedSelectedImage:selectedImage4 withFinishedUnselectedImage:unselectedImage4];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 10;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath; 
-{
-    return 150;
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"normCell"];
-    cell.textLabel.text = @"Hello";
-    return cell;
-}
-
 - (void)viewDidUnload
 {
+    [self setButton1:nil];
+    [self setButton2:nil];
+    [self setSelectedSeg:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

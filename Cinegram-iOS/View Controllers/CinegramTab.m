@@ -13,15 +13,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor clearColor];
-
-	// Do any additional setup after loading the view.
+    [self viewStylings];
 }
+
+- (void)viewStylings
+{   
+    self.view.backgroundColor = [UIColor clearColor];
+    
+    UIImage *barLogoImage = [UIImage imageNamed: @"ab_navBarLogo.png"];
+    UIImageView *navigationImage = [[UIImageView alloc] initWithImage: barLogoImage];
+    self.navigationItem.titleView = navigationImage;
+}
+
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

@@ -3,7 +3,7 @@
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -223,26 +223,113 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qpa-7e-CAS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Ao2-eo-Gqz" customClass="HomeTab" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="Vsr-Ht-cvr">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="DFa-sh-tTJ">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="6L6-fR-ynR">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FeI-6P-3gr">
+                                    <rect key="frame" x="0.0" y="0.0" width="160" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                    <size key="titleShadowOffset" width="1" height="1"/>
+                                    <state key="normal" title="Latest Videos" backgroundImage="sg_seg1_down.png">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" title="Latest Videos" backgroundImage="sg_seg1_up.png">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="button1:" destination="Ao2-eo-Gqz" eventType="touchUpInside" id="nTs-S1-Jlo"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bhk-lC-U5g">
+                                    <rect key="frame" x="160" y="0.0" width="160" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                    <size key="titleShadowOffset" width="1" height="1"/>
+                                    <state key="normal" title="Popular Videos" backgroundImage="sg_seg2_down.png">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" title="Popular Videos" backgroundImage="sg_seg2_up.png">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="button2:" destination="Ao2-eo-Gqz" eventType="touchUpInside" id="4hQ-Ya-zMb"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="normCell" rowHeight="100" id="gDf-Ut-YQM">
-                                <rect key="frame" x="0.0" y="22" width="320" height="100"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="normCell" rowHeight="100" id="0oc-eB-4mT" customClass="HomeTableCell">
+                                <rect key="frame" x="0.0" y="66" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view alpha="0.0" contentMode="scaleToFill" id="mSC-dQ-oS5">
+                                            <rect key="frame" x="0.0" y="45" width="320" height="54"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sh_BG.png" id="OVV-KQ-lNr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sh_mail.png" id="BZD-Gw-Ziy">
+                                                    <rect key="frame" x="207" y="15" width="28" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sh_star.png" id="iYn-q8-MUy">
+                                                    <rect key="frame" x="143" y="10" width="35" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sh_twitter.png" id="M3H-0l-Rdc">
+                                                    <rect key="frame" x="86" y="13" width="32" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="shareView" destination="mSC-dQ-oS5" id="XNU-V5-UXv"/>
+                                    <outletCollection property="gestureRecognizers" destination="0kE-PO-QGr" appends="YES" id="vmA-Kb-Lo8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ao2-eo-Gqz" id="IAp-Bp-hMW"/>
+                            <outlet property="delegate" destination="Ao2-eo-Gqz" id="d8V-dJ-dzh"/>
+                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="FIQ-DE-gi9">
-                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="aYm-X0-iEY"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sign out" id="aYm-X0-iEY"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="9Zq-Ki-eqC"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="button1" destination="FeI-6P-3gr" id="Rp7-Lb-qZk"/>
+                        <outlet property="button2" destination="bhk-lC-U5g" id="o1E-cz-Xje"/>
+                    </connections>
                 </tableViewController>
+                <swipeGestureRecognizer direction="right" id="0kE-PO-QGr"/>
             </objects>
             <point key="canvasLocation" x="963" y="-1335"/>
         </scene>
@@ -288,6 +375,14 @@
     </scenes>
     <resources>
         <image name="Default.png" width="320" height="480"/>
+        <image name="sg_seg1_down.png" width="160" height="44"/>
+        <image name="sg_seg1_up.png" width="160" height="44"/>
+        <image name="sg_seg2_down.png" width="160" height="44"/>
+        <image name="sg_seg2_up.png" width="160" height="44"/>
+        <image name="sh_BG.png" width="320" height="54"/>
+        <image name="sh_mail.png" width="28" height="23"/>
+        <image name="sh_star.png" width="35" height="33"/>
+        <image name="sh_twitter.png" width="32" height="27"/>
     </resources>
     <classes>
         <class className="CameraTab" superclassName="UIViewController">
@@ -296,8 +391,23 @@
         <class className="CinegramTab" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CinegramTab.h"/>
         </class>
-        <class className="HomeTab" superclassName="UITableViewController">
+        <class className="HomeTab" superclassName="PullRefreshTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeTab.h"/>
+            <relationships>
+                <relationship kind="action" name="button1:"/>
+                <relationship kind="action" name="button2:"/>
+                <relationship kind="outlet" name="button1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="button2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="selectedSeg" candidateClass="NSString"/>
+                <relationship kind="outlet" name="swipeGestureRecognizerRight" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="outlet" name="swipedCell" candidateClass="NSString"/>
+            </relationships>
+        </class>
+        <class className="HomeTableCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeTableCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="shareView" candidateClass="UIView"/>
+            </relationships>
         </class>
         <class className="IntroCheck" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IntroCheck.h"/>
@@ -310,6 +420,9 @@
         </class>
         <class className="MyVideosTab" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MyVideosTab.h"/>
+        </class>
+        <class className="PullRefreshTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PullRefreshTableViewController.h"/>
         </class>
         <class className="SettingsTab" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsTab.h"/>

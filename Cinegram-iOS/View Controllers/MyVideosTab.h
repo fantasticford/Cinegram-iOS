@@ -10,4 +10,6 @@
 
 @interface MyVideosTab : UITableViewController
 
+- (void)viewStylings;
+
 @end

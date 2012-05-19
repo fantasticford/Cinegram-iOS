@@ -13,9 +13,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor clearColor];
+    [self viewStylings];
+}
 
-	// Do any additional setup after loading the view.
+- (void)viewStylings
+{   
+    self.view.backgroundColor = [UIColor clearColor];
+    
+    UIImage *barLogoImage = [UIImage imageNamed: @"se_navBarLogo.png"];
+    UIImageView *navigationImage = [[UIImageView alloc] initWithImage: barLogoImage];
+    self.navigationItem.titleView = navigationImage;
 }
 
 - (void)viewDidUnload
