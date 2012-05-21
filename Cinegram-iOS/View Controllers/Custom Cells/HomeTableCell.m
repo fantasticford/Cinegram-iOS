@@ -11,5 +11,6 @@
 @implementation HomeTableCell
 
 @synthesize shareView = _shareView;
+@synthesize videoThumb = _videoThumb;
 
 @end

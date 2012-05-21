@@ -17,6 +17,7 @@
 @synthesize swipeGestureRecognizerRight = _swipeGestureRecognizerRight;
 @synthesize swipedCell = _swipedCell;
 @synthesize deSwipedCell = _deSwipedCell;
+@synthesize dragging = _dragging;
 
 - (void)viewDidLoad
 {
@@ -30,16 +31,18 @@
 { 
     CGPoint swipeLocation = [recognizer locationInView:self.tableView];
     NSIndexPath *swipedIndexPath = [self.tableView indexPathForRowAtPoint:swipeLocation];
-    self.swipedCell = [NSString stringWithFormat:@"%d", swipedIndexPath.row];
+    self.swipedCell = [NSString stringWithFormat:@"Cell %d", swipedIndexPath.section + 1];
     [self.tableView reloadData];
+    NSLog(@"%@", self.swipedCell);
 }
 
 - (void)oneFingerSwipeleft:(UISwipeGestureRecognizer *)recognizer
 { 
     CGPoint swipeLocation = [recognizer locationInView:self.tableView];
     NSIndexPath *swipedIndexPath = [self.tableView indexPathForRowAtPoint:swipeLocation];
-    self.deSwipedCell = [NSString stringWithFormat:@"%d", swipedIndexPath.row];
+    self.deSwipedCell = [NSString stringWithFormat:@"Cell %d", swipedIndexPath.section + 1];
     [self.tableView reloadData];
+    NSLog(@"%@", self.deSwipedCell);
 }
 
 - (void)segWork
@@ -65,19 +68,61 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath; 
 {
-    return 150;
+    return 190;
+}
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+    return 10;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return @"";
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 35;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 35)];
+    headerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ge_background.png"]];
+    
+    UIImageView *profileImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pr_userIcon.png"]];
+    profileImage.frame = CGRectMake(5, 5, 25, 25);
+    
+    UILabel *profileName = [[UILabel alloc] initWithFrame:CGRectMake(35, 5, 200, 25)];
+    profileName.backgroundColor = [UIColor clearColor];
+    [profileName setFont:[UIFont boldSystemFontOfSize:12]];
+    profileName.textColor = [UIColor colorWithRed:0.486 green:0.486 blue:0.486 alpha:1.];
+    profileName.text = @"Profile Name";
+    
+    UILabel *postDate = [[UILabel alloc] initWithFrame:CGRectMake(265, 5, 50, 25)];
+    postDate.backgroundColor = [UIColor clearColor];
+    [postDate setFont:[UIFont boldSystemFontOfSize:12]];
+    postDate.textColor = [UIColor colorWithRed:0.749 green:0.749 blue:0.749 alpha:1.];
+    postDate.textAlignment = UITextAlignmentRight;
+    postDate.text = @"24h";
+    
+    [headerView addSubview:profileImage];
+    [headerView addSubview:profileName];
+    [headerView addSubview:postDate];
+    
+    return headerView;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     HomeTableCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"normCell"];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Cell %d", indexPath.row + 1];
+    NSString *cellNumber =  [NSString stringWithFormat:@"Cell %d", indexPath.section + 1];
+    
     cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ge_background.png"]];
 
     UISwipeGestureRecognizer *right = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(oneFingerSwiperight:)];    
@@ -87,25 +132,65 @@
     UISwipeGestureRecognizer *left = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(oneFingerSwipeleft:)];    
     [left setDirection:UISwipeGestureRecognizerDirectionLeft];
     [cell addGestureRecognizer:left];
-
-    cell.shareView.frame = CGRectMake(0, 96, cell.shareView.frame.size.width, cell.shareView.frame.size.height);
     
-    NSString *curCell = [NSString stringWithFormat:@"%d", indexPath.row];
-    if([curCell isEqualToString:self.swipedCell]){
+    cell.videoThumb.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"vd_videoBackground.png"]];
+    cell.videoThumb.frame = CGRectMake(5, 0, cell.videoThumb.frame.size.width, cell.videoThumb.frame.size.height);
+
+    UIView *shareView = [[UIView alloc] initWithFrame:CGRectMake(0, 136, 320, 54)];
+    shareView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sh_BG.png"]];
+    
+    UIButton *tweetButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    tweetButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sh_twitter.png"]];
+    tweetButton.frame = CGRectMake(90, 13, 32, 27);
+    
+    UIButton *favButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    favButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sh_star.png"]];
+    favButton.frame = CGRectMake(145, 10, 35, 33);
+    
+    UIButton *emailButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    emailButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sh_mail.png"]];
+    emailButton.frame = CGRectMake(205, 17, 28, 23);
+    
+    [shareView addSubview:tweetButton];
+    [shareView addSubview:favButton];
+    [shareView addSubview:emailButton];
+    
+    cell.shareView.frame = CGRectMake(0, 136, 320, 54);
+    
+    UIView *videoWatchCount = [[UIView alloc] initWithFrame:CGRectMake(262, 0, 50, 45)];
+    videoWatchCount.backgroundColor = [UIColor colorWithRed:0.365 green:0.365 blue:0.365 alpha:1.];
+    
+    UIView *favCount = [[UIView alloc] initWithFrame:CGRectMake(262, 53, 50, 45)];
+    favCount.backgroundColor = [UIColor colorWithRed:0.365 green:0.365 blue:0.365 alpha:1.];
+    
+    UIButton *viewProfile = [[UIButton alloc] initWithFrame:CGRectMake(262, 105, 50, 45)];
+    viewProfile.backgroundColor = [UIColor colorWithRed:0.365 green:0.365 blue:0.365 alpha:1.];
+    
+    UIButton *fanVideo = [[UIButton alloc] initWithFrame:CGRectMake(5, 155, 75, 20)];
+    fanVideo.backgroundColor = [UIColor colorWithRed:0.365 green:0.365 blue:0.365 alpha:1.];
+
+    UIButton *addComment = [[UIButton alloc] initWithFrame:CGRectMake(85, 155, 75, 20)];
+    addComment.backgroundColor = [UIColor colorWithRed:0.365 green:0.365 blue:0.365 alpha:1.];
+
+    [cell addSubview:videoWatchCount];
+    [cell addSubview:favCount];
+    [cell addSubview:viewProfile];
+    //[cell addSubview:fanVideo];
+    //[cell addSubview:addComment];
+    
+    if([cellNumber isEqualToString:self.swipedCell] && [self.scrolling isEqualToString:@"FALSE"]){
         [UIView beginAnimations:@"fade out" context:nil];
         [UIView setAnimationDuration:0.5];
         cell.shareView.alpha = 1;
         [UIView commitAnimations];
-        
         self.swipedCell = @"zoink";
     }
     
-    if([curCell isEqualToString:self.deSwipedCell]){
+    if([cellNumber isEqualToString:self.deSwipedCell] || [self.scrolling isEqualToString:@"TRUE"]){
         [UIView beginAnimations:@"fade out" context:nil];
         [UIView setAnimationDuration:0.5];
         cell.shareView.alpha = 0;
         [UIView commitAnimations];
-
         self.deSwipedCell = @"zoink";
     }
     

@@ -11,5 +11,6 @@
 @interface HomeTableCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UIView *shareView;
+@property (strong, nonatomic) IBOutlet UIButton *videoThumb;
 
 @end

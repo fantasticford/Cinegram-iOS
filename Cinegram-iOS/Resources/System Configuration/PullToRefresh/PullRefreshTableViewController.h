@@ -50,6 +50,7 @@
 @property (nonatomic, copy) NSString *textPull;
 @property (nonatomic, copy) NSString *textRelease;
 @property (nonatomic, copy) NSString *textLoading;
+@property (nonatomic, strong) NSString *scrolling;
 
 - (void)setupStrings;
 - (void)addPullToRefreshHeader;

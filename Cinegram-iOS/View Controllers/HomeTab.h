@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeGestureRecognizerRight;
 @property (strong, nonatomic) IBOutlet NSString *swipedCell;
 @property (strong, nonatomic) IBOutlet NSString *deSwipedCell;
+@property (strong, nonatomic) IBOutlet NSString *dragging;
 
 - (IBAction)button1:(id)sender;
 - (IBAction)button2:(id)sender;

@@ -35,7 +35,7 @@
 
 @implementation PullRefreshTableViewController
 
-@synthesize textPull, textRelease, textLoading, refreshHeaderView, refreshLabel, refreshArrow, refreshSpinner, refreshBG;
+@synthesize textPull, textRelease, textLoading, refreshHeaderView, refreshLabel, refreshArrow, refreshSpinner, refreshBG, scrolling;
 
 - (id)initWithStyle:(UITableViewStyle)style {
   self = [super initWithStyle:style];
@@ -63,6 +63,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  self.scrolling = @"FALSE";
   [self addPullToRefreshHeader];
 }
 
@@ -101,6 +102,8 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     if (isLoading) return;
     isDragging = YES;
+    self.scrolling = @"TRUE";
+    [self.tableView reloadData];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -132,6 +135,12 @@
         // Released above the header
         [self startLoading];
     }
+    
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{    self.scrolling = @"FALSE";
+    [self.tableView reloadData];
 }
 
 - (void)startLoading {
