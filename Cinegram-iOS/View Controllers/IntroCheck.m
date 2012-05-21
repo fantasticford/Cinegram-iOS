@@ -21,14 +21,22 @@
     self.defaultImage.alpha = 0;
     [UIView commitAnimations];
     
-    [self skipLoad];
-	// Do any additional setup after loading the view.
+    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+    NSString *loggedIn = [settings objectForKey:@"userLoggedIn"];
+    if([loggedIn isEqualToString:@"TRUE"]) [self skipLoad];
+    else[self logIn];
 }
 
 - (void)skipLoad
 {
     NSLog(@"Skip");
     [self performSegueWithIdentifier:@"skipLogIn" sender:self];
+}
+
+- (void)logIn
+{
+    NSLog(@"Log In");
+    [self performSegueWithIdentifier:@"logIn" sender:self];
 }
 
 - (void)viewDidUnload

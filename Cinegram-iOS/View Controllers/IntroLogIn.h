@@ -10,4 +10,6 @@
 
 @interface IntroLogIn : UIViewController
 
+@property (strong, nonatomic) IBOutlet NSString *logInSuccess;
+
 @end

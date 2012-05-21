@@ -3,14 +3,15 @@
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="xNS-zT-KkE">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mdq-UH-Rg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" id="sJP-lL-KHg" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="sJP-lL-KHg" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8iK-5m-6ac">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -29,12 +30,122 @@
                     <view key="view" contentMode="scaleToFill" id="i3j-ao-oqj">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="lg_background.png" id="GPP-hF-wQL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rpt-9I-cJb">
+                                <rect key="frame" x="49" y="327" width="87" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="lg_register.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XsE-Hd-aYI">
+                                <rect key="frame" x="200" y="348" width="70" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="lg_logIn.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JOq-Qh-zQR" kind="modal" modalTransitionStyle="coverVertical" id="XrI-cx-yQe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="nRC-sF-Wio"/>
+                    <connections>
+                        <segue destination="4HK-Sj-3n9" kind="modal" identifier="logInComplete" modalTransitionStyle="crossDissolve" id="lMY-aH-uL4"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-573" y="-762"/>
+        </scene>
+        <!--Intro Log In Process-->
+        <scene sceneID="lM7-jP-Xju">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLO-bS-1N2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="JOq-Qh-zQR" customClass="IntroLogInProcess" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LVc-MJ-uZi">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="lg_backgroundClear.png" id="Q8Y-gd-R0r">
+                                <rect key="frame" x="0.0" y="-20" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="lg_failedLogIn.png" id="n9T-SK-blU">
+                                <rect key="frame" x="30" y="100" width="268" height="190"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="lg_form.png" id="4Fb-Om-06F">
+                                <rect key="frame" x="18" y="62" width="285" height="92"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="17" id="3hu-hy-RVh">
+                                <rect key="frame" x="27" y="72" width="262" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" id="Qcg-It-TTG">
+                                <rect key="frame" x="27" y="115" width="262" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="formDone:" destination="JOq-Qh-zQR" eventType="editingDidEndOnExit" id="o3T-U8-nDf"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qf4-8W-9Xa">
+                                <rect key="frame" x="20" y="22" width="74" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="lg_close.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButton:" destination="JOq-Qh-zQR" eventType="touchUpInside" id="OTq-cP-bX0"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="whiteLarge" id="3A7-eE-bbm">
+                                <rect key="frame" x="142" y="324" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="lg_loading.png" id="Efb-jw-Nbu">
+                                <rect key="frame" x="116" y="379" width="96" height="28"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="failedLogIn" destination="n9T-SK-blU" id="LAh-TX-hOr"/>
+                        <outlet property="loadingGraphic" destination="Efb-jw-Nbu" id="Nxr-9L-ndM"/>
+                        <outlet property="loadingSpinner" destination="3A7-eE-bbm" id="9Sw-va-KOV"/>
+                        <outlet property="logInEmail" destination="3hu-hy-RVh" id="b7Y-tP-0d4"/>
+                        <outlet property="logInPassword" destination="Qcg-It-TTG" id="ctQ-Qc-Quu"/>
+                        <outlet property="processIndicator" destination="3A7-eE-bbm" id="SrH-p0-Zc1"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-113" y="-762"/>
         </scene>
         <!--Intro Check-->
         <scene sceneID="5">
@@ -42,11 +153,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
                 <viewController id="2" customClass="IntroCheck" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Default.png" id="752-TC-ZR4">
-                                <rect key="frame" x="0.0" y="-64" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="-20" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>
@@ -56,6 +167,7 @@
                     <connections>
                         <outlet property="defaultImage" destination="752-TC-ZR4" id="U6w-6M-x15"/>
                         <segue destination="4HK-Sj-3n9" kind="modal" identifier="skipLogIn" modalTransitionStyle="crossDissolve" id="PK8-AY-2SL"/>
+                        <segue destination="Rst-6G-tBJ" kind="modal" identifier="logIn" modalTransitionStyle="crossDissolve" id="qjs-8F-oB0"/>
                     </connections>
                 </viewController>
             </objects>
@@ -302,38 +414,53 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sh_mail.png" id="BZD-Gw-Ziy">
-                                                    <rect key="frame" x="207" y="15" width="28" height="23"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sh_star.png" id="iYn-q8-MUy">
-                                                    <rect key="frame" x="143" y="10" width="35" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sh_twitter.png" id="M3H-0l-Rdc">
-                                                    <rect key="frame" x="86" y="13" width="32" height="27"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ejg-1G-C0u">
+                                                    <rect key="frame" x="85" y="14" width="39" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" image="sh_twitter.png">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iFZ-i0-Zdw">
+                                                    <rect key="frame" x="143" y="8" width="34" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" image="sh_star.png">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="59H-MD-ox9">
+                                                    <rect key="frame" x="197" y="14" width="37" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" image="sh_mail.png">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aiv-q5-9Gm">
-                                            <rect key="frame" x="270" y="5" width="45" height="45"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                            <state key="normal">
-                                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <state key="highlighted">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <gestureRecognizers/>
                                 <connections>
+                                    <outlet property="emailButton" destination="59H-MD-ox9" id="I5n-Yf-sgG"/>
                                     <outlet property="shareView" destination="mSC-dQ-oS5" id="8AK-yC-8HA"/>
+                                    <outlet property="starButton" destination="iFZ-i0-Zdw" id="iWb-wx-ARH"/>
+                                    <outlet property="twitterShareButton" destination="ejg-1G-C0u" id="75d-AP-Kw6"/>
                                     <outlet property="videoThumb" destination="IZt-Ys-aDK" id="jLf-NL-mgG"/>
                                     <outletCollection property="gestureRecognizers" destination="0kE-PO-QGr" appends="YES" id="vmA-Kb-Lo8"/>
                                 </connections>
@@ -345,11 +472,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="FIQ-DE-gi9">
-                        <barButtonItem key="leftBarButtonItem" title="Sign out" id="aYm-X0-iEY"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sign out" id="aYm-X0-iEY">
+                            <connections>
+                                <action selector="signOut:" destination="Ao2-eo-Gqz" id="W0t-le-ukh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="button1" destination="FeI-6P-3gr" id="Rp7-Lb-qZk"/>
                         <outlet property="button2" destination="bhk-lC-U5g" id="o1E-cz-Xje"/>
+                        <segue destination="Rst-6G-tBJ" kind="modal" identifier="signOut" id="sAe-Nv-TaU"/>
                     </connections>
                 </tableViewController>
                 <swipeGestureRecognizer direction="right" id="0kE-PO-QGr"/>
@@ -398,6 +530,14 @@
     </scenes>
     <resources>
         <image name="Default.png" width="320" height="480"/>
+        <image name="lg_background.png" width="320" height="480"/>
+        <image name="lg_backgroundClear.png" width="320" height="480"/>
+        <image name="lg_close.png" width="74" height="24"/>
+        <image name="lg_failedLogIn.png" width="286" height="137"/>
+        <image name="lg_form.png" width="285" height="92"/>
+        <image name="lg_loading.png" width="96" height="28"/>
+        <image name="lg_logIn.png" width="70" height="77"/>
+        <image name="lg_register.png" width="87" height="98"/>
         <image name="sg_seg1_down.png" width="160" height="44"/>
         <image name="sg_seg1_up.png" width="160" height="44"/>
         <image name="sg_seg2_down.png" width="160" height="44"/>
@@ -419,6 +559,7 @@
             <relationships>
                 <relationship kind="action" name="button1:"/>
                 <relationship kind="action" name="button2:"/>
+                <relationship kind="action" name="signOut:"/>
                 <relationship kind="outlet" name="button1" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="button2" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="deSwipedCell" candidateClass="NSString"/>
@@ -431,7 +572,10 @@
         <class className="HomeTableCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeTableCell.h"/>
             <relationships>
+                <relationship kind="outlet" name="emailButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="shareView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="starButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="twitterShareButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="videoThumb" candidateClass="UIButton"/>
             </relationships>
         </class>
@@ -443,6 +587,23 @@
         </class>
         <class className="IntroLogIn" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IntroLogIn.h"/>
+            <relationships>
+                <relationship kind="outlet" name="logInSuccess" candidateClass="NSString"/>
+            </relationships>
+        </class>
+        <class className="IntroLogInProcess" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntroLogInProcess.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelButton:"/>
+                <relationship kind="action" name="formDone:"/>
+                <relationship kind="outlet" name="failedLogIn" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="loadingGraphic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="loadingSpinner" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="logInEmail" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="logInPassword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="logInSuccess" candidateClass="NSString"/>
+                <relationship kind="outlet" name="processIndicator" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
         </class>
         <class className="MyVideosTab" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MyVideosTab.h"/>

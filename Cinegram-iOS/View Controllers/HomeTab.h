@@ -23,5 +23,6 @@
 - (IBAction)button2:(id)sender;
 - (void)viewStylings;
 - (void)segWork;
+- (IBAction)signOut:(id)sender;
 
 @end

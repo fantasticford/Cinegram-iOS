@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *defaultImage;
 
 - (void)skipLoad;
+- (void)logIn;
 
 @end

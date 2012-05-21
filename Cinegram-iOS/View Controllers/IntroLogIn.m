@@ -10,10 +10,19 @@
 
 @implementation IntroLogIn
 
+@synthesize logInSuccess = _logInSuccess;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+    NSString *loggedIn = [settings objectForKey:@"userLoggedIn"];
+    if([loggedIn isEqualToString:@"TRUE"]) [self performSegueWithIdentifier:@"logInComplete" sender:self];
 }
 
 - (void)viewDidUnload

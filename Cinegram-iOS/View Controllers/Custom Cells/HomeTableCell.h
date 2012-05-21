@@ -12,5 +12,8 @@
 
 @property (strong, nonatomic) IBOutlet UIView *shareView;
 @property (strong, nonatomic) IBOutlet UIButton *videoThumb;
+@property (strong, nonatomic) IBOutlet UIButton *twitterShareButton;
+@property (strong, nonatomic) IBOutlet UIButton *starButton;
+@property (strong, nonatomic) IBOutlet UIButton *emailButton;
 
 @end
