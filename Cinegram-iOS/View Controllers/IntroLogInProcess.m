@@ -52,8 +52,8 @@
     NSString *logIn = @"TRUE";
     
     NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
-    [settings setObject:self.logInEmail forKey:@"userEmail"];
-    [settings setObject:self.logInPassword forKey:@"userPassword"];
+    [settings setObject:self.logInEmail.text forKey:@"userEmail"];
+    [settings setObject:self.logInPassword.text forKey:@"userPassword"];
     [settings setObject:@"TRUE" forKey:@"userLoggedIn"];
     [settings synchronize];
     

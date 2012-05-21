@@ -80,7 +80,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath; 
 {
-    return 180;
+    if(indexPath.section == 9) return 200;
+    else return 190;
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
@@ -138,29 +139,57 @@
     [left setDirection:UISwipeGestureRecognizerDirectionLeft];
     [cell addGestureRecognizer:left];
     
-    cell.videoThumb.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"vd_videoBackground.png"]];
+    cell.videoThumb.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"vd_sampleVideo.png"]];
     cell.videoThumb.frame = CGRectMake(5, 0, cell.videoThumb.frame.size.width, cell.videoThumb.frame.size.height);
+    cell.videoThumb.imageView.image = [UIImage imageNamed:@""];
     
+    UILabel *videoTitle = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 200, 20)];
+    videoTitle.shadowColor = [UIColor blackColor];
+    videoTitle.shadowOffset = CGSizeMake(1, 1);
+    videoTitle.textColor = [UIColor whiteColor];
+    videoTitle.backgroundColor = [UIColor clearColor];
+    videoTitle.font = [UIFont boldSystemFontOfSize:12];
+    videoTitle.text = @"Video Name";
+        
     UIImageView *cellBG = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 180)];
     cellBG.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ge_background.png"]];
     
-    cell.shareView.frame = CGRectMake(0, 125, 320, 54);
+    cell.shareView.frame = CGRectMake(0, 135, 320, 54);
     
-    UIView *videoWatchCount = [[UIView alloc] initWithFrame:CGRectMake(262, 0, 50, 53)];
-    videoWatchCount.backgroundColor = [UIColor colorWithRed:0.365 green:0.365 blue:0.365 alpha:1.];
+    UIView *videoWatchCount = [[UIView alloc] initWithFrame:CGRectMake(247, 0, 65, 53)];
+    UILabel *videoCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 60, 35)];
+    videoCountLabel.text = @"1,908";
+    videoCountLabel.textColor = [UIColor whiteColor];
+    videoCountLabel.shadowColor = [UIColor blackColor];
+    videoCountLabel.shadowOffset = CGSizeMake(1, 1);
+    videoCountLabel.font = [UIFont boldSystemFontOfSize:16];
+    videoCountLabel.backgroundColor = [UIColor clearColor];
+    [videoWatchCount addSubview:videoCountLabel];
+    videoWatchCount.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"hm_viewsCount.png"]];
     
-    UIView *favCount = [[UIView alloc] initWithFrame:CGRectMake(262, 61, 50, 53)];
-    favCount.backgroundColor = [UIColor colorWithRed:0.365 green:0.365 blue:0.365 alpha:1.];
-    
-    UIButton *viewProfile = [[UIButton alloc] initWithFrame:CGRectMake(262, 121, 50, 54)];
-    viewProfile.backgroundColor = [UIColor colorWithRed:0.365 green:0.365 blue:0.365 alpha:1.];
-    
-    UIButton *fanVideo = [[UIButton alloc] initWithFrame:CGRectMake(5, 155, 115, 20)];
-    fanVideo.backgroundColor = [UIColor colorWithRed:0.365 green:0.365 blue:0.365 alpha:1.];
+    UIView *favCount = [[UIView alloc] initWithFrame:CGRectMake(247, 61, 65, 53)];
+    UILabel *favCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 60, 35)];
+    favCountLabel.text = @"25";
+    favCountLabel.textColor = [UIColor whiteColor];
+    favCountLabel.shadowColor = [UIColor blackColor];
+    favCountLabel.shadowOffset = CGSizeMake(1, 1);
+    favCountLabel.font = [UIFont boldSystemFontOfSize:16];
+    favCountLabel.backgroundColor = [UIColor clearColor];
+    [favCount addSubview:favCountLabel];
 
-    UIButton *addComment = [[UIButton alloc] initWithFrame:CGRectMake(125, 155, 130, 20)];
-    addComment.backgroundColor = [UIColor colorWithRed:0.365 green:0.365 blue:0.365 alpha:1.];
+    favCount.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"hm_favsCount.png"]];
+    
+    UIButton *viewProfile = [[UIButton alloc] initWithFrame:CGRectMake(247, 121, 65, 53)];
+    viewProfile.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"hm_viewProfile.png"]];
+    [viewProfile setTitle: @"" forState: UIControlStateSelected];
+    
+    UIButton *fanVideo = [[UIButton alloc] initWithFrame:CGRectMake(5, 154, 115, 20)];
+    fanVideo.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"hm_likeButton.png"]];
+    
+    UIButton *addComment = [[UIButton alloc] initWithFrame:CGRectMake(125, 154, 115, 20)];
+    addComment.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"hm_commentButton.png"]];
 
+    [cell addSubview:videoTitle];
     [cell addSubview:videoWatchCount];
     [cell addSubview:favCount];
     [cell addSubview:viewProfile];

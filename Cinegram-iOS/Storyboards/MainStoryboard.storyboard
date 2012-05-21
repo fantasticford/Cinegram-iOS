@@ -3,7 +3,7 @@
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -28,7 +28,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bfd-WF-bTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Rst-6G-tBJ" customClass="IntroLogIn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i3j-ao-oqj">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="lg_background.png" id="GPP-hF-wQL">
@@ -79,11 +79,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLO-bS-1N2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="JOq-Qh-zQR" customClass="IntroLogInProcess" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LVc-MJ-uZi">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="lg_backgroundClear.png" id="Q8Y-gd-R0r">
-                                <rect key="frame" x="0.0" y="-20" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="lg_failedLogIn.png" id="n9T-SK-blU">
@@ -110,7 +110,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qf4-8W-9Xa">
-                                <rect key="frame" x="20" y="22" width="74" height="24"/>
+                                <rect key="frame" x="20" y="22" width="57" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="lg_close.png">
@@ -179,11 +179,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6u-b0-hbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cHw-bS-OYY" customClass="CameraTab" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ukk-Td-83P">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ppj-ue-xcz"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="963" y="-197"/>
@@ -194,7 +195,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WbW-pE-6b9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="jAT-Nj-5Io" customClass="CinegramTab" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gv0-3B-vpD">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -210,6 +211,7 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" id="cVg-vD-w3D"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="963" y="381"/>
@@ -220,6 +222,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tvh-SX-ZRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="M0q-xG-Lls" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="nFP-V8-mZR"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="RaO-Un-ihd">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -236,7 +239,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqo-Nv-S9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="eBQ-oz-m7r" customClass="SettingsTab" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vfD-fT-sH0">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -252,6 +255,7 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" id="4Ow-7d-dJU"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="963" y="970"/>
@@ -262,6 +266,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1Z-xp-hdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="3V8-bF-xai" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="f2R-AV-sN3"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="EOH-9G-6jf">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -278,6 +283,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRi-uA-9Kn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="bab-v9-aQ9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="jU8-ef-Uhq"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="KVZ-dy-gVa">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -294,7 +300,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCV-WD-wQf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Q3b-JV-2km" customClass="MyVideosTab" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hwn-28-dEl">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -310,6 +316,7 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" id="4wp-XG-TaH"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="963" y="-762"/>
@@ -320,6 +327,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXE-2M-lAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="rRr-he-RVq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="ELC-ST-mOX"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="KOc-rt-3JC">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -336,7 +344,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qpa-7e-CAS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Ao2-eo-Gqz" customClass="HomeTab" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="29" sectionFooterHeight="22" id="DFa-sh-tTJ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="6L6-fR-ynR">
@@ -395,7 +403,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IZt-Ys-aDK">
-                                            <rect key="frame" x="0.0" y="0.0" width="250" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="235" height="150"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <state key="normal">
@@ -406,6 +414,10 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="vd_videoOverlay.png" id="Ixa-fM-Vyt">
+                                            <rect key="frame" x="5" y="0.0" width="235" height="150"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                         <view alpha="0.0" contentMode="scaleToFill" id="mSC-dQ-oS5">
                                             <rect key="frame" x="0.0" y="95" width="320" height="54"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -452,12 +464,25 @@
                                                 </button>
                                             </subviews>
                                         </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h3U-db-IVh">
+                                            <rect key="frame" x="86" y="44" width="62" height="62"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" image="vd_playButton.png">
+                                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outlet property="emailButton" destination="59H-MD-ox9" id="I5n-Yf-sgG"/>
+                                    <outlet property="playVideo" destination="h3U-db-IVh" id="v5w-aL-Si5"/>
                                     <outlet property="shareView" destination="mSC-dQ-oS5" id="8AK-yC-8HA"/>
                                     <outlet property="starButton" destination="iFZ-i0-Zdw" id="iWb-wx-ARH"/>
                                     <outlet property="twitterShareButton" destination="ejg-1G-C0u" id="75d-AP-Kw6"/>
@@ -478,6 +503,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="button1" destination="FeI-6P-3gr" id="Rp7-Lb-qZk"/>
                         <outlet property="button2" destination="bhk-lC-U5g" id="o1E-cz-Xje"/>
@@ -494,6 +522,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LO4-uo-xzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="Bxz-dj-smm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="Nij-Pf-ON3"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="n2a-hj-Ib5">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -511,6 +540,7 @@
                 <tabBarController definesPresentationContext="YES" id="4HK-Sj-3n9" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="EA3-UN-ls8"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="H2J-LZ-g6D">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -531,8 +561,8 @@
     <resources>
         <image name="Default.png" width="320" height="480"/>
         <image name="lg_background.png" width="320" height="480"/>
-        <image name="lg_backgroundClear.png" width="320" height="480"/>
-        <image name="lg_close.png" width="74" height="24"/>
+        <image name="lg_backgroundClear.png" width="320" height="460"/>
+        <image name="lg_close.png" width="57" height="24"/>
         <image name="lg_failedLogIn.png" width="286" height="137"/>
         <image name="lg_form.png" width="285" height="92"/>
         <image name="lg_loading.png" width="96" height="28"/>
@@ -546,6 +576,8 @@
         <image name="sh_mail.png" width="28" height="23"/>
         <image name="sh_star.png" width="35" height="33"/>
         <image name="sh_twitter.png" width="32" height="27"/>
+        <image name="vd_playButton.png" width="62" height="62"/>
+        <image name="vd_videoOverlay.png" width="235" height="150"/>
     </resources>
     <classes>
         <class className="CameraTab" superclassName="UIViewController">
@@ -573,6 +605,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeTableCell.h"/>
             <relationships>
                 <relationship kind="outlet" name="emailButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="playVideo" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="shareView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="starButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="twitterShareButton" candidateClass="UIButton"/>

@@ -15,5 +15,6 @@
 @synthesize twitterShareButton = _twitterShareButton;
 @synthesize starButton = _starButton;
 @synthesize emailButton = _emailButton;
+@synthesize playVideo = _playVideo;
 
 @end
