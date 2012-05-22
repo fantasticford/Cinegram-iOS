@@ -17,5 +17,11 @@
 @property (strong, nonatomic) IBOutlet UIButton *emailButton;
 @property (strong, nonatomic) IBOutlet UIButton *playVideo;
 @property (strong, nonatomic) IBOutlet UILabel *videoTitle;
+@property (strong, nonatomic) IBOutlet UIImageView *videoWatchCount;
+@property (strong, nonatomic) IBOutlet UILabel *videoCountLabel;
+@property (strong, nonatomic) IBOutlet UILabel *favCountLabel;
+@property (strong, nonatomic) IBOutlet UIButton *viewProfile;
+@property (strong, nonatomic) IBOutlet UIButton *fanVideo;
+@property (strong, nonatomic) IBOutlet UIButton *commentVideo;
 
 @end

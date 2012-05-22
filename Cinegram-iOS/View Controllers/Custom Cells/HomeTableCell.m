@@ -17,5 +17,11 @@
 @synthesize emailButton = _emailButton;
 @synthesize playVideo = _playVideo;
 @synthesize videoTitle = _videoTitle;
+@synthesize videoWatchCount = _videoWatchCount;
+@synthesize videoCountLabel = _videoCountLabel;
+@synthesize favCountLabel = _favCountLabel;
+@synthesize viewProfile = _viewProfile;
+@synthesize fanVideo = _fanVideo;
+@synthesize commentVideo = _commentVideo;
 
 @end

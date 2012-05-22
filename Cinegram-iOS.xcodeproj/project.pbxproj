@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61989663156C489C00DA5E25 /* vd_sampleVideo_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 61989661156C489C00DA5E25 /* vd_sampleVideo_2.png */; };
+		61989664156C489C00DA5E25 /* vd_sampleVideo_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61989662156C489C00DA5E25 /* vd_sampleVideo_2@2x.png */; };
 		619D2F8A1567C5CC00225366 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 619D2F801567C5CC00225366 /* Reachability.m */; };
 		619D2F8D1567F20F00225366 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619D2F8C1567F20F00225366 /* QuartzCore.framework */; };
 		619D2F931567F23400225366 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619D2F921567F23400225366 /* SystemConfiguration.framework */; };
@@ -148,6 +150,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		61989661156C489C00DA5E25 /* vd_sampleVideo_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vd_sampleVideo_2.png; sourceTree = "<group>"; };
+		61989662156C489C00DA5E25 /* vd_sampleVideo_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vd_sampleVideo_2@2x.png"; sourceTree = "<group>"; };
 		619D2F7F1567C5CC00225366 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		619D2F801567C5CC00225366 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		619D2F8C1567F20F00225366 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -675,6 +679,8 @@
 		61FB560D15696A590065A636 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				61989661156C489C00DA5E25 /* vd_sampleVideo_2.png */,
+				61989662156C489C00DA5E25 /* vd_sampleVideo_2@2x.png */,
 				619ED7A5156B052E00CDC3C8 /* vd_sampleVideo.png */,
 				619ED7A6156B052E00CDC3C8 /* vd_sampleVideo@2x.png */,
 				619ED79D156B016E00CDC3C8 /* vd_playButton.png */,
@@ -861,6 +867,8 @@
 				619ED7A8156B052E00CDC3C8 /* vd_sampleVideo@2x.png in Resources */,
 				61E3111C156B7701003B5E31 /* sh_BG_alt.png in Resources */,
 				61E3111D156B7701003B5E31 /* sh_BG_alt@2x.png in Resources */,
+				61989663156C489C00DA5E25 /* vd_sampleVideo_2.png in Resources */,
+				61989664156C489C00DA5E25 /* vd_sampleVideo_2@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
