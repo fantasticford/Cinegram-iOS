@@ -102,6 +102,8 @@
 		61A64AD01565AE410009D34D /* hm_navBarLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A64ACE1565AE410009D34D /* hm_navBarLogo@2x.png */; };
 		61B6CC891565AF9D0077AA76 /* ge_tabBarBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B6CC871565AF9D0077AA76 /* ge_tabBarBG.png */; };
 		61B6CC8A1565AF9D0077AA76 /* ge_tabBarBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B6CC881565AF9D0077AA76 /* ge_tabBarBG@2x.png */; };
+		61E3111C156B7701003B5E31 /* sh_BG_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E3111A156B7701003B5E31 /* sh_BG_alt.png */; };
+		61E3111D156B7701003B5E31 /* sh_BG_alt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E3111B156B7701003B5E31 /* sh_BG_alt@2x.png */; };
 		61EFC7CB15667CE800412578 /* CameraTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EFC7CA15667CE700412578 /* CameraTab.m */; };
 		61EFC7CF15667F2A00412578 /* MyVideosTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EFC7CE15667F2A00412578 /* MyVideosTab.m */; };
 		61EFC7D215667F3900412578 /* CinegramTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EFC7D115667F3900412578 /* CinegramTab.m */; };
@@ -251,6 +253,8 @@
 		61A64ACE1565AE410009D34D /* hm_navBarLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hm_navBarLogo@2x.png"; sourceTree = "<group>"; };
 		61B6CC871565AF9D0077AA76 /* ge_tabBarBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ge_tabBarBG.png; sourceTree = "<group>"; };
 		61B6CC881565AF9D0077AA76 /* ge_tabBarBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ge_tabBarBG@2x.png"; sourceTree = "<group>"; };
+		61E3111A156B7701003B5E31 /* sh_BG_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sh_BG_alt.png; sourceTree = "<group>"; };
+		61E3111B156B7701003B5E31 /* sh_BG_alt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sh_BG_alt@2x.png"; sourceTree = "<group>"; };
 		61EFC7C915667CE700412578 /* CameraTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraTab.h; sourceTree = "<group>"; };
 		61EFC7CA15667CE700412578 /* CameraTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraTab.m; sourceTree = "<group>"; };
 		61EFC7CD15667F2A00412578 /* MyVideosTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVideosTab.h; sourceTree = "<group>"; };
@@ -411,6 +415,8 @@
 		619D30D51568620600225366 /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				61E3111A156B7701003B5E31 /* sh_BG_alt.png */,
+				61E3111B156B7701003B5E31 /* sh_BG_alt@2x.png */,
 				619D30D61568620600225366 /* sh_BG.png */,
 				619D30D71568620600225366 /* sh_BG@2x.png */,
 				619D30D81568620600225366 /* sh_mail.png */,
@@ -853,6 +859,8 @@
 				619ED7A4156B016E00CDC3C8 /* vd_videoOverlay@2x.png in Resources */,
 				619ED7A7156B052E00CDC3C8 /* vd_sampleVideo.png in Resources */,
 				619ED7A8156B052E00CDC3C8 /* vd_sampleVideo@2x.png in Resources */,
+				61E3111C156B7701003B5E31 /* sh_BG_alt.png in Resources */,
+				61E3111D156B7701003B5E31 /* sh_BG_alt@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

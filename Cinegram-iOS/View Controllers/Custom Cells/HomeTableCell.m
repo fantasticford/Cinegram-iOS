@@ -16,5 +16,6 @@
 @synthesize starButton = _starButton;
 @synthesize emailButton = _emailButton;
 @synthesize playVideo = _playVideo;
+@synthesize videoTitle = _videoTitle;
 
 @end

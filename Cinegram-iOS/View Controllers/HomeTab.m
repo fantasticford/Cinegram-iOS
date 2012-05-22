@@ -140,22 +140,11 @@
     [cell addGestureRecognizer:left];
     
     cell.videoThumb.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"vd_sampleVideo.png"]];
-    cell.videoThumb.frame = CGRectMake(5, 0, cell.videoThumb.frame.size.width, cell.videoThumb.frame.size.height);
-    cell.videoThumb.imageView.image = [UIImage imageNamed:@""];
-    
-    UILabel *videoTitle = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 200, 20)];
-    videoTitle.shadowColor = [UIColor blackColor];
-    videoTitle.shadowOffset = CGSizeMake(1, 1);
-    videoTitle.textColor = [UIColor whiteColor];
-    videoTitle.backgroundColor = [UIColor clearColor];
-    videoTitle.font = [UIFont boldSystemFontOfSize:12];
-    videoTitle.text = @"Video Name";
+    cell.videoTitle.text = @"Video Name";
         
     UIImageView *cellBG = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 180)];
     cellBG.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ge_background.png"]];
-    
-    cell.shareView.frame = CGRectMake(0, 135, 320, 54);
-    
+        
     UIView *videoWatchCount = [[UIView alloc] initWithFrame:CGRectMake(247, 0, 65, 53)];
     UILabel *videoCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 60, 35)];
     videoCountLabel.text = @"1,908";
@@ -189,7 +178,6 @@
     UIButton *addComment = [[UIButton alloc] initWithFrame:CGRectMake(125, 154, 115, 20)];
     addComment.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"hm_commentButton.png"]];
 
-    [cell addSubview:videoTitle];
     [cell addSubview:videoWatchCount];
     [cell addSubview:favCount];
     [cell addSubview:viewProfile];

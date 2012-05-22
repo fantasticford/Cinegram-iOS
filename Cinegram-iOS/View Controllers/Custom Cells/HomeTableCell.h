@@ -11,10 +11,11 @@
 @interface HomeTableCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UIView *shareView;
-@property (strong, nonatomic) IBOutlet UIButton *videoThumb;
+@property (strong, nonatomic) IBOutlet UIView *videoThumb;
 @property (strong, nonatomic) IBOutlet UIButton *twitterShareButton;
 @property (strong, nonatomic) IBOutlet UIButton *starButton;
 @property (strong, nonatomic) IBOutlet UIButton *emailButton;
 @property (strong, nonatomic) IBOutlet UIButton *playVideo;
+@property (strong, nonatomic) IBOutlet UILabel *videoTitle;
 
 @end
